@@ -1,0 +1,1758 @@
+2021-01-10 15:38:56 =ERROR REPORT====
+** Generic server <0.6925.0> terminating 
+** Last message in was {'EXIT',<0.6921.0>,shutdown}
+** When Server state == {state,amqp_direct_connection,{state,rabbit@f0057040d563,{user,<<"guest">>,[administrator],[{rabbit_auth_backend_internal,none}]},<<"/">>,{amqp_params_direct,<<"guest">>,{encrypted,<<"iJTDKI+Hjvs2mWGGCzCst7nIvEn8jwxN3vqa9sDi/xZc/TlRBb0beLXYyF098cxW">>},<<"/">>,rabbit@f0057040d563,{amqp_adapter_info,{172,23,0,2},15675,{172,23,0,1},63232,<<"172.23.0.1:63232 -> 172.23.0.2:15675">>,{'Web MQTT',"3.1.1"},[{variable_map,#{<<"client_id">> => <<"mqttjs_e4d2870a">>}},{channels,1},{channel_max,1},{frame_max,0},{client_properties,[{<<"product">>,longstr,<<"MQTT client">>},{client_id,longstr,<<"mqttjs_e4d2870a">>}]},{ssl,false}]},[]},{amqp_adapter_info,{172,23,0,2},15675,{172,23,0,1},63232,<<"172.23.0.1:63232 -> 172.23.0.2:15675">>,{'Web MQTT',"3.1.1"},[{variable_map,#{<<"client_id">> => <<"mqttjs_e4d2870a">>}},{channels,1},{channel_max,1},{frame_max,0},{client_properties,[{<<"product">>,longstr,<<"MQTT client">>},{client_id,longstr,<<"mqttjs_e4d2870a">>}]},{ssl,false}]},<0.6928.0>,undefined,1610293026375},<0.6927.0>,{amqp_params_direct,<<"guest">>,{encrypted,<<"iJTDKI+Hjvs2mWGGCzCst7nIvEn8jwxN3vqa9sDi/xZc/TlRBb0beLXYyF098cxW">>},<<"/">>,rabbit@f0057040d563,{amqp_adapter_info,{172,23,0,2},15675,{172,23,0,1},63232,<<"172.23.0.1:63232 -> 172.23.0.2:15675">>,{'Web MQTT',"3.1.1"},[{variable_map,#{<<"client_id">> => <<"mqttjs_e4d2870a">>}},{channels,1},{channel_max,1},{frame_max,0},{client_properties,[{<<"product">>,longstr,<<"MQTT client">>},{client_id,longstr,<<"mqttjs_e4d2870a">>}]},{ssl,false}]},[]},0,[{<<"capabilities">>,table,[{<<"publisher_confirms">>,bool,true},{<<"exchange_exchange_bindings">>,bool,true},{<<"basic.nack">>,bool,true},{<<"consumer_cancel_notify">>,bool,true},{<<"connection.blocked">>,bool,true},{<<"consumer_priorities">>,bool,true},{<<"authentication_failure_close">>,bool,true},{<<"per_consumer_qos">>,bool,true},{<<"direct_reply_to">>,bool,true}]},{<<"cluster_name">>,longstr,<<"rabbit@f0057040d563">>},{<<"copyright">>,longstr,<<"Copyright (c) 2007-2020 VMware, Inc. or its affiliates.">>},{<<"information">>,longstr,<<"Licensed under the MPL 2.0. Website: https://rabbitmq.com">>},{<<"platform">>,longstr,<<"Erlang/OTP 23.1.3">>},{<<"product">>,longstr,<<"RabbitMQ">>},{<<"version">>,longstr,<<"3.8.9">>}],none,false}
+** Reason for termination ==
+** "stopping because dependent process <0.6921.0> died: shutdown"
+2021-01-10 15:38:56 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_connection:init/1
+    pid: <0.6925.0>
+    registered_name: []
+    exception exit: {"stopping because dependent process <0.6921.0> died: shutdown",[{gen_server,handle_common_reply,8,[{file,"gen_server.erl"},{line,796}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.6923.0>,amqp_sup,<0.590.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.6923.0>]
+    dictionary: [{process_name,{amqp_gen_connection,<<"172.23.0.1:63232 -> 172.23.0.2:15675">>}},{gen_server_call_timeout,60000}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 3589
+  neighbours:
+2021-01-10 15:38:56 =SUPERVISOR REPORT====
+     Supervisor: {<0.6923.0>,amqp_connection_sup}
+     Context:    child_terminated
+     Reason:     "stopping because dependent process <0.6921.0> died: shutdown"
+     Offender:   [{pid,<0.6925.0>},{name,connection},{mfargs,{amqp_gen_connection,start_link,[<0.6924.0>,{amqp_params_direct,<<"guest">>,{encrypted,<<"iJTDKI+Hjvs2mWGGCzCst7nIvEn8jwxN3vqa9sDi/xZc/TlRBb0beLXYyF098cxW">>},<<"/">>,rabbit@f0057040d563,{amqp_adapter_info,{172,23,0,2},15675,{172,23,0,1},63232,<<"172.23.0.1:63232 -> 172.23.0.2:15675">>,{'Web MQTT',"3.1.1"},[{variable_map,#{<<"client_id">> => <<"mqttjs_e4d2870a">>}},{channels,1},{channel_max,1},{frame_max,0},{client_properties,[{<<"product">>,longstr,<<"MQTT client">>},{client_id,longstr,<<"mqttjs_e4d2870a">>}]},{ssl,false}]},[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
+
+2021-01-10 15:38:56 =SUPERVISOR REPORT====
+     Supervisor: {<0.6923.0>,amqp_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.6925.0>},{name,connection},{mfargs,{amqp_gen_connection,start_link,[<0.6924.0>,{amqp_params_direct,<<"guest">>,{encrypted,<<"iJTDKI+Hjvs2mWGGCzCst7nIvEn8jwxN3vqa9sDi/xZc/TlRBb0beLXYyF098cxW">>},<<"/">>,rabbit@f0057040d563,{amqp_adapter_info,{172,23,0,2},15675,{172,23,0,1},63232,<<"172.23.0.1:63232 -> 172.23.0.2:15675">>,{'Web MQTT',"3.1.1"},[{variable_map,#{<<"client_id">> => <<"mqttjs_e4d2870a">>}},{channels,1},{channel_max,1},{frame_max,0},{client_properties,[{<<"product">>,longstr,<<"MQTT client">>},{client_id,longstr,<<"mqttjs_e4d2870a">>}]},{ssl,false}]},[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
+
+2021-01-10 15:40:18 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.767.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.777.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.767.0>},60000]}}
+    ancestors: [<0.765.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-A5cq7MciQyoiJaad2q_nBg">>},{'EXIT',<0.777.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.771.0>,{shutdown,normal}}]
+    links: [#Port<0.51>,<0.765.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15164
+  neighbours:
+2021-01-10 15:40:18 =SUPERVISOR REPORT====
+     Supervisor: {<0.765.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.777.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.767.0>},60000]}}
+     Offender:   [{pid,<0.767.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.51>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.766.0>,socket => #Port<0.51>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:18 =SUPERVISOR REPORT====
+     Supervisor: {<0.765.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.767.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.51>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.766.0>,socket => #Port<0.51>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:19 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.802.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.812.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.802.0>},60000]}}
+    ancestors: [<0.800.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-IChkAgXulV-hB0XfP8l3-w">>},{'EXIT',<0.812.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.806.0>,{shutdown,normal}}]
+    links: [#Port<0.53>,<0.800.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15173
+  neighbours:
+2021-01-10 15:40:19 =SUPERVISOR REPORT====
+     Supervisor: {<0.800.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.812.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.802.0>},60000]}}
+     Offender:   [{pid,<0.802.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.53>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.801.0>,socket => #Port<0.53>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:19 =SUPERVISOR REPORT====
+     Supervisor: {<0.800.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.802.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.53>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.801.0>,socket => #Port<0.53>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:21 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.844.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.854.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.844.0>},60000]}}
+    ancestors: [<0.842.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-Mg3VE25SIk0_NSa7bDZ2XQ">>},{'EXIT',<0.854.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.848.0>,{shutdown,normal}}]
+    links: [#Port<0.58>,<0.842.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15171
+  neighbours:
+2021-01-10 15:40:21 =SUPERVISOR REPORT====
+     Supervisor: {<0.842.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.854.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.844.0>},60000]}}
+     Offender:   [{pid,<0.844.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.58>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.843.0>,socket => #Port<0.58>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:21 =SUPERVISOR REPORT====
+     Supervisor: {<0.842.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.844.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.58>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.843.0>,socket => #Port<0.58>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:23 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.894.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.908.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.894.0>},60000]}}
+    ancestors: [<0.892.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-l2rSSpqUZp6oKm3D-R-Ufg">>},{'EXIT',<0.908.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.898.0>,{shutdown,normal}}]
+    links: [#Port<0.64>,<0.892.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15175
+  neighbours:
+2021-01-10 15:40:23 =SUPERVISOR REPORT====
+     Supervisor: {<0.892.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.908.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.894.0>},60000]}}
+     Offender:   [{pid,<0.894.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.64>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.893.0>,socket => #Port<0.64>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:23 =SUPERVISOR REPORT====
+     Supervisor: {<0.892.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.894.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.64>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.893.0>,socket => #Port<0.64>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:25 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.939.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.949.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.939.0>},60000]}}
+    ancestors: [<0.937.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-LnFDOHpkEKD4d31Iw5MAmA">>},{'EXIT',<0.949.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.943.0>,{shutdown,normal}}]
+    links: [#Port<0.68>,<0.937.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15163
+  neighbours:
+2021-01-10 15:40:25 =SUPERVISOR REPORT====
+     Supervisor: {<0.937.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.949.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.939.0>},60000]}}
+     Offender:   [{pid,<0.939.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.68>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.938.0>,socket => #Port<0.68>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:25 =SUPERVISOR REPORT====
+     Supervisor: {<0.937.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.939.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.68>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.938.0>,socket => #Port<0.68>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:28 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.985.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.995.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.985.0>},60000]}}
+    ancestors: [<0.983.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 2
+    messages: [{'basic.consume_ok',<<"amq.ctag-7SLLq0VtzO7Yj4hlKHOrUQ">>},{'EXIT',<0.995.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}}]
+    links: [<0.989.0>,#Port<0.73>,<0.983.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15246
+  neighbours:
+2021-01-10 15:40:28 =SUPERVISOR REPORT====
+     Supervisor: {<0.983.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.995.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.985.0>},60000]}}
+     Offender:   [{pid,<0.985.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.73>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.984.0>,socket => #Port<0.73>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:28 =SUPERVISOR REPORT====
+     Supervisor: {<0.983.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.985.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.73>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.984.0>,socket => #Port<0.73>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:29 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1027.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1037.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1027.0>},60000]}}
+    ancestors: [<0.1025.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-IXZ2zMegoh_rVKn4DKxFTw">>},{'EXIT',<0.1037.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1031.0>,{shutdown,normal}}]
+    links: [#Port<0.77>,<0.1025.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15176
+  neighbours:
+2021-01-10 15:40:29 =SUPERVISOR REPORT====
+     Supervisor: {<0.1025.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1037.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1027.0>},60000]}}
+     Offender:   [{pid,<0.1027.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.77>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1026.0>,socket => #Port<0.77>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:29 =SUPERVISOR REPORT====
+     Supervisor: {<0.1025.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1027.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.77>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1026.0>,socket => #Port<0.77>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:31 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1069.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1079.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1069.0>},60000]}}
+    ancestors: [<0.1067.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-l_SI__IPki2YgrV-XHjC3A">>},{'EXIT',<0.1079.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1073.0>,{shutdown,normal}}]
+    links: [#Port<0.82>,<0.1067.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15184
+  neighbours:
+2021-01-10 15:40:31 =SUPERVISOR REPORT====
+     Supervisor: {<0.1067.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1079.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1069.0>},60000]}}
+     Offender:   [{pid,<0.1069.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.82>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1068.0>,socket => #Port<0.82>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:31 =SUPERVISOR REPORT====
+     Supervisor: {<0.1067.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1069.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.82>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1068.0>,socket => #Port<0.82>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:33 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1114.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1124.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1114.0>},60000]}}
+    ancestors: [<0.1112.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-rN396mnZdPWW6gpD6JAi9Q">>},{'EXIT',<0.1124.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1118.0>,{shutdown,normal}}]
+    links: [#Port<0.86>,<0.1112.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15437
+  neighbours:
+2021-01-10 15:40:33 =SUPERVISOR REPORT====
+     Supervisor: {<0.1112.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1124.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1114.0>},60000]}}
+     Offender:   [{pid,<0.1114.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.86>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1113.0>,socket => #Port<0.86>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:33 =SUPERVISOR REPORT====
+     Supervisor: {<0.1112.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1114.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.86>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1113.0>,socket => #Port<0.86>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:35 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1156.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1166.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1156.0>},60000]}}
+    ancestors: [<0.1154.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-FMoM4fjTVYWtf_TRDzAdLQ">>},{'EXIT',<0.1166.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1160.0>,{shutdown,normal}}]
+    links: [#Port<0.90>,<0.1154.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15184
+  neighbours:
+2021-01-10 15:40:35 =SUPERVISOR REPORT====
+     Supervisor: {<0.1154.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1166.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1156.0>},60000]}}
+     Offender:   [{pid,<0.1156.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.90>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1155.0>,socket => #Port<0.90>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:35 =SUPERVISOR REPORT====
+     Supervisor: {<0.1154.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1156.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.90>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1155.0>,socket => #Port<0.90>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1194.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1206.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1194.0>},60000]}}
+    ancestors: [<0.1192.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 2
+    messages: [{'basic.consume_ok',<<"amq.ctag-DpZYD8LXl7wHHr-NRRFU7w">>},{'EXIT',<0.1206.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}}]
+    links: [<0.1200.0>,#Port<0.93>,<0.1192.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15169
+  neighbours:
+2021-01-10 15:40:37 =SUPERVISOR REPORT====
+     Supervisor: {<0.1192.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1206.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1194.0>},60000]}}
+     Offender:   [{pid,<0.1194.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.93>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1193.0>,socket => #Port<0.93>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:37 =SUPERVISOR REPORT====
+     Supervisor: {<0.1192.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1194.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.93>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1193.0>,socket => #Port<0.93>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:39 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1243.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1253.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1243.0>},60000]}}
+    ancestors: [<0.1241.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 2
+    messages: [{'basic.consume_ok',<<"amq.ctag-QY0rW0HPLn_U3KGcv2Hbcg">>},{'EXIT',<0.1253.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}}]
+    links: [<0.1247.0>,#Port<0.98>,<0.1241.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15177
+  neighbours:
+2021-01-10 15:40:39 =SUPERVISOR REPORT====
+     Supervisor: {<0.1241.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1253.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1243.0>},60000]}}
+     Offender:   [{pid,<0.1243.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.98>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1242.0>,socket => #Port<0.98>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:39 =SUPERVISOR REPORT====
+     Supervisor: {<0.1241.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1243.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.98>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1242.0>,socket => #Port<0.98>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:41 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1281.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1295.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1281.0>},60000]}}
+    ancestors: [<0.1279.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-0EWxUh9AEVGGY0406io_PQ">>},{'EXIT',<0.1295.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1285.0>,{shutdown,normal}}]
+    links: [#Port<0.102>,<0.1279.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15171
+  neighbours:
+2021-01-10 15:40:41 =SUPERVISOR REPORT====
+     Supervisor: {<0.1279.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1295.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1281.0>},60000]}}
+     Offender:   [{pid,<0.1281.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.102>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1280.0>,socket => #Port<0.102>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:41 =SUPERVISOR REPORT====
+     Supervisor: {<0.1279.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1281.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.102>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1280.0>,socket => #Port<0.102>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:43 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1326.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1336.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1326.0>},60000]}}
+    ancestors: [<0.1324.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-9PS0iD_wh7f3J9C2AZ9a0Q">>},{'EXIT',<0.1336.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1330.0>,{shutdown,normal}}]
+    links: [#Port<0.106>,<0.1324.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15188
+  neighbours:
+2021-01-10 15:40:43 =SUPERVISOR REPORT====
+     Supervisor: {<0.1324.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1336.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1326.0>},60000]}}
+     Offender:   [{pid,<0.1326.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.106>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1325.0>,socket => #Port<0.106>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:43 =SUPERVISOR REPORT====
+     Supervisor: {<0.1324.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1326.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.106>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1325.0>,socket => #Port<0.106>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:44 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1368.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1378.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1368.0>},60000]}}
+    ancestors: [<0.1366.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-kgydvgJq8X0jz4SmcIvU2A">>},{'EXIT',<0.1378.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1372.0>,{shutdown,normal}}]
+    links: [#Port<0.110>,<0.1366.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15178
+  neighbours:
+2021-01-10 15:40:44 =SUPERVISOR REPORT====
+     Supervisor: {<0.1366.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1378.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1368.0>},60000]}}
+     Offender:   [{pid,<0.1368.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.110>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1367.0>,socket => #Port<0.110>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:44 =SUPERVISOR REPORT====
+     Supervisor: {<0.1366.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1368.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.110>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1367.0>,socket => #Port<0.110>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:47 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1410.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1420.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1410.0>},60000]}}
+    ancestors: [<0.1408.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 2
+    messages: [{'basic.consume_ok',<<"amq.ctag-4NAvP-5wC2c2VWs4o345JA">>},{'EXIT',<0.1420.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}}]
+    links: [<0.1414.0>,#Port<0.114>,<0.1408.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15189
+  neighbours:
+2021-01-10 15:40:47 =SUPERVISOR REPORT====
+     Supervisor: {<0.1408.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1420.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1410.0>},60000]}}
+     Offender:   [{pid,<0.1410.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.114>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1409.0>,socket => #Port<0.114>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:47 =SUPERVISOR REPORT====
+     Supervisor: {<0.1408.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1410.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.114>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1409.0>,socket => #Port<0.114>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:48 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1451.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1461.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1451.0>},60000]}}
+    ancestors: [<0.1449.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-U9BU26DYGbT3pArK83ycOw">>},{'EXIT',<0.1461.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1455.0>,{shutdown,normal}}]
+    links: [#Port<0.117>,<0.1449.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15188
+  neighbours:
+2021-01-10 15:40:48 =SUPERVISOR REPORT====
+     Supervisor: {<0.1449.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1461.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1451.0>},60000]}}
+     Offender:   [{pid,<0.1451.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.117>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1450.0>,socket => #Port<0.117>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:48 =SUPERVISOR REPORT====
+     Supervisor: {<0.1449.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1451.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.117>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1450.0>,socket => #Port<0.117>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:49 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1486.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1496.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1486.0>},60000]}}
+    ancestors: [<0.1484.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 2
+    messages: [{'basic.consume_ok',<<"amq.ctag-G4d-dGYpZYn_8oo8TWZ6mA">>},{'EXIT',<0.1496.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}}]
+    links: [<0.1490.0>,#Port<0.120>,<0.1484.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15181
+  neighbours:
+2021-01-10 15:40:49 =SUPERVISOR REPORT====
+     Supervisor: {<0.1484.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1496.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1486.0>},60000]}}
+     Offender:   [{pid,<0.1486.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.120>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1485.0>,socket => #Port<0.120>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:49 =SUPERVISOR REPORT====
+     Supervisor: {<0.1484.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1486.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.120>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1485.0>,socket => #Port<0.120>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:51 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1535.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1545.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1535.0>},60000]}}
+    ancestors: [<0.1533.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-01_wNJ48nv1FHUTsOZB4Ig">>},{'EXIT',<0.1545.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1539.0>,{shutdown,normal}}]
+    links: [#Port<0.126>,<0.1533.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15184
+  neighbours:
+2021-01-10 15:40:51 =SUPERVISOR REPORT====
+     Supervisor: {<0.1533.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1545.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1535.0>},60000]}}
+     Offender:   [{pid,<0.1535.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.126>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1534.0>,socket => #Port<0.126>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:51 =SUPERVISOR REPORT====
+     Supervisor: {<0.1533.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1535.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.126>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1534.0>,socket => #Port<0.126>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:53 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1576.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1586.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1576.0>},60000]}}
+    ancestors: [<0.1574.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-3_JkRqyGhnhphxZuSM-MyQ">>},{'EXIT',<0.1586.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1580.0>,{shutdown,normal}}]
+    links: [#Port<0.129>,<0.1574.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15180
+  neighbours:
+2021-01-10 15:40:53 =SUPERVISOR REPORT====
+     Supervisor: {<0.1574.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1586.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1576.0>},60000]}}
+     Offender:   [{pid,<0.1576.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.129>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1575.0>,socket => #Port<0.129>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:53 =SUPERVISOR REPORT====
+     Supervisor: {<0.1574.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1576.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.129>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1575.0>,socket => #Port<0.129>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:54 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1618.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1628.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1618.0>},60000]}}
+    ancestors: [<0.1616.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-HJNB9ettjcBcF9rmRg-jMg">>},{'EXIT',<0.1628.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1622.0>,{shutdown,normal}}]
+    links: [#Port<0.133>,<0.1616.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15164
+  neighbours:
+2021-01-10 15:40:54 =SUPERVISOR REPORT====
+     Supervisor: {<0.1616.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1628.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1618.0>},60000]}}
+     Offender:   [{pid,<0.1618.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.133>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1617.0>,socket => #Port<0.133>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:54 =SUPERVISOR REPORT====
+     Supervisor: {<0.1616.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1618.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.133>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1617.0>,socket => #Port<0.133>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:56 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1664.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1678.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1664.0>},60000]}}
+    ancestors: [<0.1662.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-EXCzxnWD9ieN0ScXzgB9yA">>},{'EXIT',<0.1678.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1668.0>,{shutdown,normal}}]
+    links: [#Port<0.138>,<0.1662.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15172
+  neighbours:
+2021-01-10 15:40:56 =SUPERVISOR REPORT====
+     Supervisor: {<0.1662.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1678.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1664.0>},60000]}}
+     Offender:   [{pid,<0.1664.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.138>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1663.0>,socket => #Port<0.138>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:56 =SUPERVISOR REPORT====
+     Supervisor: {<0.1662.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1664.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.138>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1663.0>,socket => #Port<0.138>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:58 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1710.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1724.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1710.0>},60000]}}
+    ancestors: [<0.1708.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-fwAJ-jpkWWv7QFmLHIl_Iw">>},{'EXIT',<0.1724.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1714.0>,{shutdown,normal}}]
+    links: [#Port<0.143>,<0.1708.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15184
+  neighbours:
+2021-01-10 15:40:58 =SUPERVISOR REPORT====
+     Supervisor: {<0.1708.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1724.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1710.0>},60000]}}
+     Offender:   [{pid,<0.1710.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.143>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1709.0>,socket => #Port<0.143>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:40:58 =SUPERVISOR REPORT====
+     Supervisor: {<0.1708.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1710.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.143>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1709.0>,socket => #Port<0.143>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:00 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1759.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1769.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1759.0>},60000]}}
+    ancestors: [<0.1756.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-nDLSOUwdV4RVcKwl_Fzrwg">>},{'EXIT',<0.1769.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1763.0>,{shutdown,normal}}]
+    links: [#Port<0.148>,<0.1756.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15181
+  neighbours:
+2021-01-10 15:41:00 =SUPERVISOR REPORT====
+     Supervisor: {<0.1756.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1769.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1759.0>},60000]}}
+     Offender:   [{pid,<0.1759.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.148>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1758.0>,socket => #Port<0.148>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:00 =SUPERVISOR REPORT====
+     Supervisor: {<0.1756.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1759.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.148>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1758.0>,socket => #Port<0.148>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:02 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1790.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1806.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1790.0>},60000]}}
+    ancestors: [<0.1788.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-aAbtV0ITaZ75nwpxCuHDWg">>},{'EXIT',<0.1806.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1796.0>,{shutdown,normal}}]
+    links: [#Port<0.151>,<0.1788.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15177
+  neighbours:
+2021-01-10 15:41:02 =SUPERVISOR REPORT====
+     Supervisor: {<0.1788.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1806.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1790.0>},60000]}}
+     Offender:   [{pid,<0.1790.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.151>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1789.0>,socket => #Port<0.151>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:02 =SUPERVISOR REPORT====
+     Supervisor: {<0.1788.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1790.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.151>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1789.0>,socket => #Port<0.151>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:04 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1842.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1852.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1842.0>},60000]}}
+    ancestors: [<0.1840.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-tgy-TDLRhyv-5a6FowWz-Q">>},{'EXIT',<0.1852.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1846.0>,{shutdown,normal}}]
+    links: [#Port<0.156>,<0.1840.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15168
+  neighbours:
+2021-01-10 15:41:04 =SUPERVISOR REPORT====
+     Supervisor: {<0.1840.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1852.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1842.0>},60000]}}
+     Offender:   [{pid,<0.1842.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.156>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1841.0>,socket => #Port<0.156>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:04 =SUPERVISOR REPORT====
+     Supervisor: {<0.1840.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1842.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.156>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1841.0>,socket => #Port<0.156>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:06 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1884.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1894.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1884.0>},60000]}}
+    ancestors: [<0.1882.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-SHz_zQJQVNfEFz9JbPYf8A">>},{'EXIT',<0.1894.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1888.0>,{shutdown,normal}}]
+    links: [#Port<0.160>,<0.1882.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15183
+  neighbours:
+2021-01-10 15:41:06 =SUPERVISOR REPORT====
+     Supervisor: {<0.1882.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1894.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1884.0>},60000]}}
+     Offender:   [{pid,<0.1884.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.160>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1883.0>,socket => #Port<0.160>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:06 =SUPERVISOR REPORT====
+     Supervisor: {<0.1882.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1884.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.160>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1883.0>,socket => #Port<0.160>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:08 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1929.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1939.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1929.0>},60000]}}
+    ancestors: [<0.1927.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag--E1rr4vZNyIv2FA12P8ovg">>},{'EXIT',<0.1939.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.1933.0>,{shutdown,normal}}]
+    links: [#Port<0.164>,<0.1927.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15179
+  neighbours:
+2021-01-10 15:41:08 =SUPERVISOR REPORT====
+     Supervisor: {<0.1927.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1939.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1929.0>},60000]}}
+     Offender:   [{pid,<0.1929.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.164>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1928.0>,socket => #Port<0.164>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:08 =SUPERVISOR REPORT====
+     Supervisor: {<0.1927.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1929.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.164>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1928.0>,socket => #Port<0.164>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:09 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.1967.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1977.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1967.0>},60000]}}
+    ancestors: [<0.1965.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 2
+    messages: [{'basic.consume_ok',<<"amq.ctag-VrRwZtf8oDxBlkiWNYxsjQ">>},{'EXIT',<0.1977.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}}]
+    links: [<0.1971.0>,#Port<0.167>,<0.1965.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15166
+  neighbours:
+2021-01-10 15:41:09 =SUPERVISOR REPORT====
+     Supervisor: {<0.1965.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.1977.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.1967.0>},60000]}}
+     Offender:   [{pid,<0.1967.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.167>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1966.0>,socket => #Port<0.167>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:09 =SUPERVISOR REPORT====
+     Supervisor: {<0.1965.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.1967.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.167>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.1966.0>,socket => #Port<0.167>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:11 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2024.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2034.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2024.0>},60000]}}
+    ancestors: [<0.2022.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-ZeWm4721Eqe4Bwwu8XRi1Q">>},{'EXIT',<0.2034.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2028.0>,{shutdown,normal}}]
+    links: [#Port<0.177>,<0.2022.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15180
+  neighbours:
+2021-01-10 15:41:11 =SUPERVISOR REPORT====
+     Supervisor: {<0.2022.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2034.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2024.0>},60000]}}
+     Offender:   [{pid,<0.2024.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.177>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2023.0>,socket => #Port<0.177>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:11 =SUPERVISOR REPORT====
+     Supervisor: {<0.2022.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2024.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.177>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2023.0>,socket => #Port<0.177>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:12 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2055.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2072.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2055.0>},60000]}}
+    ancestors: [<0.2053.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-Z9L-8y26VPU8XY0RHi3UcA">>},{'EXIT',<0.2072.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2061.0>,{shutdown,normal}}]
+    links: [#Port<0.179>,<0.2053.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15174
+  neighbours:
+2021-01-10 15:41:12 =SUPERVISOR REPORT====
+     Supervisor: {<0.2053.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2072.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2055.0>},60000]}}
+     Offender:   [{pid,<0.2055.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.179>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2054.0>,socket => #Port<0.179>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:12 =SUPERVISOR REPORT====
+     Supervisor: {<0.2053.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2055.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.179>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2054.0>,socket => #Port<0.179>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:14 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2108.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2118.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2108.0>},60000]}}
+    ancestors: [<0.2106.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-EaX23TyHc6XxssZuxSDwAQ">>},{'EXIT',<0.2118.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2112.0>,{shutdown,normal}}]
+    links: [#Port<0.185>,<0.2106.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15181
+  neighbours:
+2021-01-10 15:41:14 =SUPERVISOR REPORT====
+     Supervisor: {<0.2106.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2118.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2108.0>},60000]}}
+     Offender:   [{pid,<0.2108.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.185>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2107.0>,socket => #Port<0.185>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:14 =SUPERVISOR REPORT====
+     Supervisor: {<0.2106.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2108.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.185>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2107.0>,socket => #Port<0.185>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:15 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2143.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2153.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2143.0>},60000]}}
+    ancestors: [<0.2141.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 2
+    messages: [{'basic.consume_ok',<<"amq.ctag-VzhrfuKCX2eWqpM4sC3EPA">>},{'EXIT',<0.2153.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}}]
+    links: [<0.2147.0>,#Port<0.188>,<0.2141.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15178
+  neighbours:
+2021-01-10 15:41:15 =SUPERVISOR REPORT====
+     Supervisor: {<0.2141.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2153.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2143.0>},60000]}}
+     Offender:   [{pid,<0.2143.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.188>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2142.0>,socket => #Port<0.188>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:15 =SUPERVISOR REPORT====
+     Supervisor: {<0.2141.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2143.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.188>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2142.0>,socket => #Port<0.188>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:17 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2181.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2193.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2181.0>},60000]}}
+    ancestors: [<0.2179.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-5AK1L-Qv3V6oSnvdwX8q0w">>},{'EXIT',<0.2193.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2187.0>,{shutdown,normal}}]
+    links: [#Port<0.191>,<0.2179.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15180
+  neighbours:
+2021-01-10 15:41:17 =SUPERVISOR REPORT====
+     Supervisor: {<0.2179.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2193.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2181.0>},60000]}}
+     Offender:   [{pid,<0.2181.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.191>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2180.0>,socket => #Port<0.191>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:17 =SUPERVISOR REPORT====
+     Supervisor: {<0.2179.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2181.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.191>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2180.0>,socket => #Port<0.191>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:18 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2222.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2232.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2222.0>},60000]}}
+    ancestors: [<0.2220.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-MJbCs4dHR_kYFF0JekCORA">>},{'EXIT',<0.2232.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2226.0>,{shutdown,normal}}]
+    links: [#Port<0.194>,<0.2220.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15179
+  neighbours:
+2021-01-10 15:41:18 =SUPERVISOR REPORT====
+     Supervisor: {<0.2220.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2232.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2222.0>},60000]}}
+     Offender:   [{pid,<0.2222.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.194>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2221.0>,socket => #Port<0.194>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:18 =SUPERVISOR REPORT====
+     Supervisor: {<0.2220.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2222.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.194>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2221.0>,socket => #Port<0.194>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:20 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2268.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2278.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2268.0>},60000]}}
+    ancestors: [<0.2263.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-txauQ5Qp9fS2Y57_Q1fB6w">>},{'EXIT',<0.2278.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2272.0>,{shutdown,normal}}]
+    links: [#Port<0.199>,<0.2263.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15184
+  neighbours:
+2021-01-10 15:41:20 =SUPERVISOR REPORT====
+     Supervisor: {<0.2263.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2278.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2268.0>},60000]}}
+     Offender:   [{pid,<0.2268.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.199>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2264.0>,socket => #Port<0.199>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:20 =SUPERVISOR REPORT====
+     Supervisor: {<0.2263.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2268.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.199>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2264.0>,socket => #Port<0.199>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:21 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2299.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2309.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2299.0>},60000]}}
+    ancestors: [<0.2297.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-A5OzZyXw9x0-whFevseCNA">>},{'EXIT',<0.2309.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2303.0>,{shutdown,normal}}]
+    links: [#Port<0.202>,<0.2297.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15184
+  neighbours:
+2021-01-10 15:41:21 =SUPERVISOR REPORT====
+     Supervisor: {<0.2297.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2309.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2299.0>},60000]}}
+     Offender:   [{pid,<0.2299.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.202>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2298.0>,socket => #Port<0.202>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:21 =SUPERVISOR REPORT====
+     Supervisor: {<0.2297.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2299.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.202>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2298.0>,socket => #Port<0.202>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:22 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2339.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2349.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2339.0>},60000]}}
+    ancestors: [<0.2337.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-gcIHK5tk98ajX3K2a9QLGw">>},{'EXIT',<0.2349.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2343.0>,{shutdown,normal}}]
+    links: [#Port<0.205>,<0.2337.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_e4d2870a",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15171
+  neighbours:
+2021-01-10 15:41:22 =SUPERVISOR REPORT====
+     Supervisor: {<0.2337.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2349.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_e4d2870aqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2339.0>},60000]}}
+     Offender:   [{pid,<0.2339.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.205>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2338.0>,socket => #Port<0.205>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:22 =SUPERVISOR REPORT====
+     Supervisor: {<0.2337.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2339.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.205>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2338.0>,socket => #Port<0.205>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:30 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2398.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2412.0>,{call,{'queue.declare',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,false,false,false,true,false,[]},none,<0.2398.0>},60000]}}
+    ancestors: [<0.2396.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 2
+    messages: [{'EXIT',<0.2412.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2406.0>,{shutdown,normal}}]
+    links: [#Port<0.213>,<0.2396.0>]
+    dictionary: [{{credit_from,<0.2412.0>},399},{credit_flow_default_credit,{400,200}},{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read},{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,write}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15851
+  neighbours:
+2021-01-10 15:41:30 =SUPERVISOR REPORT====
+     Supervisor: {<0.2396.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2412.0>,{call,{'queue.declare',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,false,false,false,true,false,[]},none,<0.2398.0>},60000]}}
+     Offender:   [{pid,<0.2398.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.213>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2397.0>,socket => #Port<0.213>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:30 =SUPERVISOR REPORT====
+     Supervisor: {<0.2396.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2398.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.213>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2397.0>,socket => #Port<0.213>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:31 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2428.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2442.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2428.0>},60000]}}
+    ancestors: [<0.2426.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-EWvkIpuUHdmxq52fg6wTbg">>},{'EXIT',<0.2442.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2436.0>,{shutdown,normal}}]
+    links: [#Port<0.217>,<0.2426.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15180
+  neighbours:
+2021-01-10 15:41:31 =SUPERVISOR REPORT====
+     Supervisor: {<0.2426.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2442.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2428.0>},60000]}}
+     Offender:   [{pid,<0.2428.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.217>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2427.0>,socket => #Port<0.217>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:31 =SUPERVISOR REPORT====
+     Supervisor: {<0.2426.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2428.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.217>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2427.0>,socket => #Port<0.217>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:32 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2465.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2475.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2465.0>},60000]}}
+    ancestors: [<0.2463.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-diUv6j4tXj7hCY_W3Rq-EQ">>},{'EXIT',<0.2475.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2469.0>,{shutdown,normal}}]
+    links: [#Port<0.220>,<0.2463.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 15359
+  neighbours:
+2021-01-10 15:41:32 =SUPERVISOR REPORT====
+     Supervisor: {<0.2463.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2475.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2465.0>},60000]}}
+     Offender:   [{pid,<0.2465.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.220>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2464.0>,socket => #Port<0.220>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:32 =SUPERVISOR REPORT====
+     Supervisor: {<0.2463.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2465.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.220>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2464.0>,socket => #Port<0.220>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:34 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2497.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2507.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2497.0>},60000]}}
+    ancestors: [<0.2495.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 2
+    messages: [{'basic.consume_ok',<<"amq.ctag-1QTGxggJapz1MBz6Hm-g-A">>},{'EXIT',<0.2507.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}}]
+    links: [<0.2501.0>,#Port<0.222>,<0.2495.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15173
+  neighbours:
+2021-01-10 15:41:34 =SUPERVISOR REPORT====
+     Supervisor: {<0.2495.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2507.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2497.0>},60000]}}
+     Offender:   [{pid,<0.2497.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.222>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2496.0>,socket => #Port<0.222>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:34 =SUPERVISOR REPORT====
+     Supervisor: {<0.2495.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2497.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.222>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2496.0>,socket => #Port<0.222>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:36 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2532.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2542.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2532.0>},60000]}}
+    ancestors: [<0.2530.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 2
+    messages: [{'basic.consume_ok',<<"amq.ctag-_Agv46gGKKWnXmBtuaqaNA">>},{'EXIT',<0.2542.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}}]
+    links: [<0.2536.0>,#Port<0.225>,<0.2530.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15171
+  neighbours:
+2021-01-10 15:41:36 =SUPERVISOR REPORT====
+     Supervisor: {<0.2530.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2542.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2532.0>},60000]}}
+     Offender:   [{pid,<0.2532.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.225>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2531.0>,socket => #Port<0.225>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:36 =SUPERVISOR REPORT====
+     Supervisor: {<0.2530.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2532.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.225>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2531.0>,socket => #Port<0.225>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:37 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2569.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2579.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2569.0>},60000]}}
+    ancestors: [<0.2567.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-3nlrj1J364SfWfX5LrnTCg">>},{'EXIT',<0.2579.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2573.0>,{shutdown,normal}}]
+    links: [#Port<0.228>,<0.2567.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 15295
+  neighbours:
+2021-01-10 15:41:37 =SUPERVISOR REPORT====
+     Supervisor: {<0.2567.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2579.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2569.0>},60000]}}
+     Offender:   [{pid,<0.2569.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.228>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2568.0>,socket => #Port<0.228>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:37 =SUPERVISOR REPORT====
+     Supervisor: {<0.2567.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2569.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.228>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2568.0>,socket => #Port<0.228>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:39 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2605.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2615.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2605.0>},60000]}}
+    ancestors: [<0.2603.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-48BhX9DPm-Y8gE0ChofU1A">>},{'EXIT',<0.2615.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2609.0>,{shutdown,normal}}]
+    links: [#Port<0.231>,<0.2603.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15182
+  neighbours:
+2021-01-10 15:41:39 =SUPERVISOR REPORT====
+     Supervisor: {<0.2603.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2615.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2605.0>},60000]}}
+     Offender:   [{pid,<0.2605.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.231>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2604.0>,socket => #Port<0.231>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:39 =SUPERVISOR REPORT====
+     Supervisor: {<0.2603.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2605.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.231>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2604.0>,socket => #Port<0.231>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:40 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2636.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2646.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2636.0>},60000]}}
+    ancestors: [<0.2634.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-uH3AXSge3kCjlOSNWWEL1w">>},{'EXIT',<0.2646.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2640.0>,{shutdown,normal}}]
+    links: [#Port<0.233>,<0.2634.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15179
+  neighbours:
+2021-01-10 15:41:40 =SUPERVISOR REPORT====
+     Supervisor: {<0.2634.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2646.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2636.0>},60000]}}
+     Offender:   [{pid,<0.2636.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.233>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2635.0>,socket => #Port<0.233>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:40 =SUPERVISOR REPORT====
+     Supervisor: {<0.2634.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2636.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.233>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2635.0>,socket => #Port<0.233>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:43 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2671.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2681.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2671.0>},60000]}}
+    ancestors: [<0.2669.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-vYOSunF9cK_7kppk8z7MEA">>},{'EXIT',<0.2681.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2675.0>,{shutdown,normal}}]
+    links: [#Port<0.237>,<0.2669.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15184
+  neighbours:
+2021-01-10 15:41:43 =SUPERVISOR REPORT====
+     Supervisor: {<0.2669.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2681.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2671.0>},60000]}}
+     Offender:   [{pid,<0.2671.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.237>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2670.0>,socket => #Port<0.237>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:43 =SUPERVISOR REPORT====
+     Supervisor: {<0.2669.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2671.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.237>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2670.0>,socket => #Port<0.237>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:44 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2710.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2720.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2710.0>},60000]}}
+    ancestors: [<0.2708.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-4ocePwgz2viqgJCWwEelfg">>},{'EXIT',<0.2720.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2714.0>,{shutdown,normal}}]
+    links: [#Port<0.241>,<0.2708.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15180
+  neighbours:
+2021-01-10 15:41:44 =SUPERVISOR REPORT====
+     Supervisor: {<0.2708.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2720.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2710.0>},60000]}}
+     Offender:   [{pid,<0.2710.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.241>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2709.0>,socket => #Port<0.241>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:44 =SUPERVISOR REPORT====
+     Supervisor: {<0.2708.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2710.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.241>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2709.0>,socket => #Port<0.241>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:46 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2741.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2751.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2741.0>},60000]}}
+    ancestors: [<0.2739.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-7s1ZE__OQEzlZP7LpYjsJA">>},{'EXIT',<0.2751.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2745.0>,{shutdown,normal}}]
+    links: [#Port<0.243>,<0.2739.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15180
+  neighbours:
+2021-01-10 15:41:46 =SUPERVISOR REPORT====
+     Supervisor: {<0.2739.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2751.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2741.0>},60000]}}
+     Offender:   [{pid,<0.2741.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.243>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2740.0>,socket => #Port<0.243>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:46 =SUPERVISOR REPORT====
+     Supervisor: {<0.2739.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2741.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.243>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2740.0>,socket => #Port<0.243>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:47 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2776.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2788.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2776.0>},60000]}}
+    ancestors: [<0.2774.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-Xe_n9LlrSbUePeJOeWyqpg">>},{'EXIT',<0.2788.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2781.0>,{shutdown,normal}}]
+    links: [#Port<0.246>,<0.2774.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15180
+  neighbours:
+2021-01-10 15:41:47 =SUPERVISOR REPORT====
+     Supervisor: {<0.2774.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2788.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2776.0>},60000]}}
+     Offender:   [{pid,<0.2776.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.246>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2775.0>,socket => #Port<0.246>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:47 =SUPERVISOR REPORT====
+     Supervisor: {<0.2774.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2776.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.246>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2775.0>,socket => #Port<0.246>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:48 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2810.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2820.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2810.0>},60000]}}
+    ancestors: [<0.2808.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-g2z-3at89s0rjTTk5zoq7A">>},{'EXIT',<0.2820.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2814.0>,{shutdown,normal}}]
+    links: [#Port<0.248>,<0.2808.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15179
+  neighbours:
+2021-01-10 15:41:48 =SUPERVISOR REPORT====
+     Supervisor: {<0.2808.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2820.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2810.0>},60000]}}
+     Offender:   [{pid,<0.2810.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.248>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2809.0>,socket => #Port<0.248>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:48 =SUPERVISOR REPORT====
+     Supervisor: {<0.2808.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2810.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.248>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2809.0>,socket => #Port<0.248>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:50 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2841.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2851.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2841.0>},60000]}}
+    ancestors: [<0.2839.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-tF0y6t5AaG8LT-PTaUmkoQ">>},{'EXIT',<0.2851.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.2845.0>,{shutdown,normal}}]
+    links: [#Port<0.250>,<0.2839.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15179
+  neighbours:
+2021-01-10 15:41:50 =SUPERVISOR REPORT====
+     Supervisor: {<0.2839.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2851.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2841.0>},60000]}}
+     Offender:   [{pid,<0.2841.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.250>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2840.0>,socket => #Port<0.250>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:50 =SUPERVISOR REPORT====
+     Supervisor: {<0.2839.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2841.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.250>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2840.0>,socket => #Port<0.250>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:52 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2880.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2892.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2880.0>},60000]}}
+    ancestors: [<0.2878.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 2
+    messages: [{'basic.consume_ok',<<"amq.ctag-lPZfYdIHKPHrxbkn_uNbAw">>},{'EXIT',<0.2892.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}}]
+    links: [<0.2886.0>,#Port<0.255>,<0.2878.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15175
+  neighbours:
+2021-01-10 15:41:52 =SUPERVISOR REPORT====
+     Supervisor: {<0.2878.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2892.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2880.0>},60000]}}
+     Offender:   [{pid,<0.2880.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.255>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2879.0>,socket => #Port<0.255>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:52 =SUPERVISOR REPORT====
+     Supervisor: {<0.2878.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2880.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.255>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2879.0>,socket => #Port<0.255>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:53 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2914.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2924.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2914.0>},60000]}}
+    ancestors: [<0.2912.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 2
+    messages: [{'basic.consume_ok',<<"amq.ctag-r58cG1LlOBcWlP9TOqbLhQ">>},{'EXIT',<0.2924.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}}]
+    links: [<0.2918.0>,#Port<0.257>,<0.2912.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15175
+  neighbours:
+2021-01-10 15:41:53 =SUPERVISOR REPORT====
+     Supervisor: {<0.2912.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2924.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2914.0>},60000]}}
+     Offender:   [{pid,<0.2914.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.257>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2913.0>,socket => #Port<0.257>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:53 =SUPERVISOR REPORT====
+     Supervisor: {<0.2912.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2914.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.257>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2913.0>,socket => #Port<0.257>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:55 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2949.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2959.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2949.0>},60000]}}
+    ancestors: [<0.2947.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 2
+    messages: [{'basic.consume_ok',<<"amq.ctag-f_LPSXIzfz2FyLNeX1MZZA">>},{'EXIT',<0.2959.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}}]
+    links: [<0.2953.0>,#Port<0.260>,<0.2947.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15168
+  neighbours:
+2021-01-10 15:41:55 =SUPERVISOR REPORT====
+     Supervisor: {<0.2947.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2959.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2949.0>},60000]}}
+     Offender:   [{pid,<0.2949.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.260>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2948.0>,socket => #Port<0.260>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:55 =SUPERVISOR REPORT====
+     Supervisor: {<0.2947.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2949.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.260>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2948.0>,socket => #Port<0.260>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:57 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.2984.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2996.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2984.0>},60000]}}
+    ancestors: [<0.2982.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 2
+    messages: [{'basic.consume_ok',<<"amq.ctag-MjZ8b1lIatyFXu2ZWUEvAw">>},{'EXIT',<0.2996.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}}]
+    links: [<0.2990.0>,#Port<0.263>,<0.2982.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15175
+  neighbours:
+2021-01-10 15:41:57 =SUPERVISOR REPORT====
+     Supervisor: {<0.2982.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.2996.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.2984.0>},60000]}}
+     Offender:   [{pid,<0.2984.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.263>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2983.0>,socket => #Port<0.263>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:57 =SUPERVISOR REPORT====
+     Supervisor: {<0.2982.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.2984.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.263>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.2983.0>,socket => #Port<0.263>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:58 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.3018.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.3028.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.3018.0>},60000]}}
+    ancestors: [<0.3016.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 2
+    messages: [{'basic.consume_ok',<<"amq.ctag-kZt4FG3GIB6N9V_rVNLixw">>},{'EXIT',<0.3028.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}}]
+    links: [<0.3022.0>,#Port<0.265>,<0.3016.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15177
+  neighbours:
+2021-01-10 15:41:58 =SUPERVISOR REPORT====
+     Supervisor: {<0.3016.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.3028.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.3018.0>},60000]}}
+     Offender:   [{pid,<0.3018.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.265>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.3017.0>,socket => #Port<0.265>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:41:58 =SUPERVISOR REPORT====
+     Supervisor: {<0.3016.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.3018.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.265>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.3017.0>,socket => #Port<0.265>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:42:00 =CRASH REPORT====
+  crasher:
+    initial call: cowboy_clear:connection_process/4
+    pid: <0.3053.0>
+    registered_name: []
+    exception exit: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.3063.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.3053.0>},60000]}}
+    ancestors: [<0.3051.0>,<0.732.0>,<0.731.0>,ranch_sup,<0.144.0>]
+    message_queue_len: 3
+    messages: [{'basic.consume_ok',<<"amq.ctag-Smzy0C9BY4MgQk7J9YRjCA">>},{'EXIT',<0.3063.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}}},{'EXIT',<0.3057.0>,{shutdown,normal}}]
+    links: [#Port<0.268>,<0.3051.0>]
+    dictionary: [{gen_server_call_timeout,60000},{topic_permission_cache,[{"dronelink/heartbeat",<<"guest">>,"mqttjs_a377ea0f",<<"/">>,<<"dronelink.topic">>,read}]},{mta_cache,[{"dronelink/heartbeat",<<"dronelink.heartbeat">>}]}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 15176
+  neighbours:
+2021-01-10 15:42:00 =SUPERVISOR REPORT====
+     Supervisor: {<0.3051.0>,rabbit_web_mqtt_connection_sup}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'dronelink.topic' in vhost '/'">>}},{gen_server,call,[<0.3063.0>,{call,{'queue.bind',0,<<"mqtt-subscription-mqttjs_a377ea0fqos0">>,<<"dronelink.topic">>,<<"dronelink.heartbeat">>,false,[]},none,<0.3053.0>},60000]}}
+     Offender:   [{pid,<0.3053.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.268>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.3052.0>,socket => #Port<0.268>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:42:00 =SUPERVISOR REPORT====
+     Supervisor: {<0.3051.0>,rabbit_web_mqtt_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.3053.0>},{name,cowboy_clear},{mfargs,{cowboy_clear,start_link,[{acceptor,{0,0,0,0,0,0,0,0},15675},#Port<0.268>,ranch_tcp,#{env => #{dispatch => [{'_',[],[{[<<"ws">>],[],rabbit_web_mqtt_handler,[{ws_opts,#{}}]}]}],keepalive_sup => <0.3052.0>,socket => #Port<0.268>},middlewares => [cowboy_router,rabbit_web_mqtt_middleware,cowboy_handler],proxy_header => false}]}},{restart_type,intrinsic},{shutdown,30000},{child_type,worker}]
+
+2021-01-10 15:52:40 =ERROR REPORT====
+** Generic server <0.4831.0> terminating 
+** Last message in was {'EXIT',<0.4827.0>,shutdown}
+** When Server state == {state,amqp_direct_connection,{state,rabbit@f0057040d563,{user,<<"guest">>,[administrator],[{rabbit_auth_backend_internal,none}]},<<"/">>,{amqp_params_direct,<<"guest">>,{encrypted,<<"rolyK1euFctG2Exkg4HbFw/Y1slhdlhcNCgqZQEVP10uOfaiWgPanfh9XRNDl2AO">>},<<"/">>,rabbit@f0057040d563,{amqp_adapter_info,{172,23,0,2},15675,{172,23,0,1},58894,<<"172.23.0.1:58894 -> 172.23.0.2:15675">>,{'Web MQTT',"3.1.1"},[{variable_map,#{<<"client_id">> => <<"mqttjs_a377ea0f">>}},{channels,1},{channel_max,1},{frame_max,0},{client_properties,[{<<"product">>,longstr,<<"MQTT client">>},{client_id,longstr,<<"mqttjs_a377ea0f">>}]},{ssl,false}]},[]},{amqp_adapter_info,{172,23,0,2},15675,{172,23,0,1},58894,<<"172.23.0.1:58894 -> 172.23.0.2:15675">>,{'Web MQTT',"3.1.1"},[{variable_map,#{<<"client_id">> => <<"mqttjs_a377ea0f">>}},{channels,1},{channel_max,1},{frame_max,0},{client_properties,[{<<"product">>,longstr,<<"MQTT client">>},{client_id,longstr,<<"mqttjs_a377ea0f">>}]},{ssl,false}]},<0.4834.0>,undefined,1610293932366},<0.4833.0>,{amqp_params_direct,<<"guest">>,{encrypted,<<"rolyK1euFctG2Exkg4HbFw/Y1slhdlhcNCgqZQEVP10uOfaiWgPanfh9XRNDl2AO">>},<<"/">>,rabbit@f0057040d563,{amqp_adapter_info,{172,23,0,2},15675,{172,23,0,1},58894,<<"172.23.0.1:58894 -> 172.23.0.2:15675">>,{'Web MQTT',"3.1.1"},[{variable_map,#{<<"client_id">> => <<"mqttjs_a377ea0f">>}},{channels,1},{channel_max,1},{frame_max,0},{client_properties,[{<<"product">>,longstr,<<"MQTT client">>},{client_id,longstr,<<"mqttjs_a377ea0f">>}]},{ssl,false}]},[]},0,[{<<"capabilities">>,table,[{<<"publisher_confirms">>,bool,true},{<<"exchange_exchange_bindings">>,bool,true},{<<"basic.nack">>,bool,true},{<<"consumer_cancel_notify">>,bool,true},{<<"connection.blocked">>,bool,true},{<<"consumer_priorities">>,bool,true},{<<"authentication_failure_close">>,bool,true},{<<"per_consumer_qos">>,bool,true},{<<"direct_reply_to">>,bool,true}]},{<<"cluster_name">>,longstr,<<"rabbit@f0057040d563">>},{<<"copyright">>,longstr,<<"Copyright (c) 2007-2020 VMware, Inc. or its affiliates.">>},{<<"information">>,longstr,<<"Licensed under the MPL 2.0. Website: https://rabbitmq.com">>},{<<"platform">>,longstr,<<"Erlang/OTP 23.1.3">>},{<<"product">>,longstr,<<"RabbitMQ">>},{<<"version">>,longstr,<<"3.8.9">>}],none,false}
+** Reason for termination ==
+** "stopping because dependent process <0.4827.0> died: shutdown"
+2021-01-10 15:52:40 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_connection:init/1
+    pid: <0.4831.0>
+    registered_name: []
+    exception exit: {"stopping because dependent process <0.4827.0> died: shutdown",[{gen_server,handle_common_reply,8,[{file,"gen_server.erl"},{line,796}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.4829.0>,amqp_sup,<0.583.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.4829.0>]
+    dictionary: [{process_name,{amqp_gen_connection,<<"172.23.0.1:58894 -> 172.23.0.2:15675">>}},{gen_server_call_timeout,60000}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 3585
+  neighbours:
+2021-01-10 15:52:40 =SUPERVISOR REPORT====
+     Supervisor: {<0.4829.0>,amqp_connection_sup}
+     Context:    child_terminated
+     Reason:     "stopping because dependent process <0.4827.0> died: shutdown"
+     Offender:   [{pid,<0.4831.0>},{name,connection},{mfargs,{amqp_gen_connection,start_link,[<0.4830.0>,{amqp_params_direct,<<"guest">>,{encrypted,<<"rolyK1euFctG2Exkg4HbFw/Y1slhdlhcNCgqZQEVP10uOfaiWgPanfh9XRNDl2AO">>},<<"/">>,rabbit@f0057040d563,{amqp_adapter_info,{172,23,0,2},15675,{172,23,0,1},58894,<<"172.23.0.1:58894 -> 172.23.0.2:15675">>,{'Web MQTT',"3.1.1"},[{variable_map,#{<<"client_id">> => <<"mqttjs_a377ea0f">>}},{channels,1},{channel_max,1},{frame_max,0},{client_properties,[{<<"product">>,longstr,<<"MQTT client">>},{client_id,longstr,<<"mqttjs_a377ea0f">>}]},{ssl,false}]},[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
+
+2021-01-10 15:52:40 =SUPERVISOR REPORT====
+     Supervisor: {<0.4829.0>,amqp_connection_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.4831.0>},{name,connection},{mfargs,{amqp_gen_connection,start_link,[<0.4830.0>,{amqp_params_direct,<<"guest">>,{encrypted,<<"rolyK1euFctG2Exkg4HbFw/Y1slhdlhcNCgqZQEVP10uOfaiWgPanfh9XRNDl2AO">>},<<"/">>,rabbit@f0057040d563,{amqp_adapter_info,{172,23,0,2},15675,{172,23,0,1},58894,<<"172.23.0.1:58894 -> 172.23.0.2:15675">>,{'Web MQTT',"3.1.1"},[{variable_map,#{<<"client_id">> => <<"mqttjs_a377ea0f">>}},{channels,1},{channel_max,1},{frame_max,0},{client_properties,[{<<"product">>,longstr,<<"MQTT client">>},{client_id,longstr,<<"mqttjs_a377ea0f">>}]},{ssl,false}]},[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
+
+2021-01-10 15:54:00 =SUPERVISOR REPORT====
+     Supervisor: {<0.772.0>,amqp_channel_sup_sup}
+     Context:    shutdown_error
+     Reason:     shutdown
+     Offender:   [{nb_children,1},{name,channel_sup},{mfargs,{amqp_channel_sup,start_link,[direct,<0.771.0>,<<"172.23.0.1:59534 -> 172.23.0.2:15675">>]}},{restart_type,temporary},{shutdown,infinity},{child_type,supervisor}]
+
