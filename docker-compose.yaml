@@ -11,3 +11,9 @@ services:
             - 15672:15672
             - 1883:1833
             - 15675:15675 
+    mongodb:
+      image: mongo
+      volumes:
+          - ./docker/mongodb/data/db:/data/db
+      ports:
+          - 1010:27017
